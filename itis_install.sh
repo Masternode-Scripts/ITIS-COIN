@@ -3,18 +3,19 @@
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='itis.conf'
 CONFIGFOLDER='/root/.itis'
-COIN_DAEMON='/usr/local/bin/itisd'
-COIN_CLI='/usr/local/bin/itis-cli'
+COIN_DAEMON='/usr/local/bin/itis-1.0.0/itisd'
+COIN_CLI='/usr/local/bin/itis-1.0.0/itis-cli'
+COIN_CLI='/root/itis-cli'
 COIN_REPO='https://www.dropbox.com/s/l2ntdv2zquvrbq6/itis-1.0.0.tar.gz'
 COIN_NAME='ITIS'
-COIN_PORT=60202
+COIN_PORT=5005
 
 
 NODEIP=$(curl -s4 icanhazip.com)
 
 
-RED='\e[93m'
-GREEN='\e[932'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
 NC='\033[0m'
 
 
@@ -27,7 +28,7 @@ function compile_node() {
   COIN_ZIP=$(echo $COIN_REPO | awk -F'/' '{print $NF}')
   tar xvzf $COIN_ZIP >/dev/null 2>&1
   compile_error
-  cp itis* /usr/local/bin
+  cp itis-1.0.0* /usr/local/bin
   compile_error
   strip $COIN_DAEMON $COIN_CLI
   cd -

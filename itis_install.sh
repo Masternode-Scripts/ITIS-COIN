@@ -5,7 +5,7 @@ CONFIG_FILE='itis.conf'
 CONFIGFOLDER='/root/.itis'
 COIN_DAEMON='/usr/local/bin/itisd'
 COIN_CLI='/usr/local/bin/itis-cli'
-COIN_REPO='https://www.dropbox.com/s/eghyw3bvdgl4ud9/itis-1.0.0-x86_64-linux-gnu.tar.gz'
+COIN_REPO='https://www.dropbox.com/s/l2ntdv2zquvrbq6/itis-1.0.0.tar.gz'
 COIN_NAME='ITIS'
 COIN_PORT=60202
 

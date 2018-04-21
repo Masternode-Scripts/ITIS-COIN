@@ -28,7 +28,7 @@ function compile_node() {
   COIN_ZIP=$(echo $COIN_REPO | awk -F'/' '{print $NF}')
   tar xvzf $COIN_ZIP >/dev/null 2>&1
   compile_error
-  cp itis-1.0.0* /usr/local/bin
+  cp -R itis-1.0.0* /usr/local/bin
   compile_error
   strip $COIN_DAEMON $COIN_CLI
   cd -
